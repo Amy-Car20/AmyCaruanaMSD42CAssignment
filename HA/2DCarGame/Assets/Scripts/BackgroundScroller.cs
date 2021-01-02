@@ -19,7 +19,7 @@ public class BackgroundScroller : MonoBehaviour
         //get the material of the background from the Renderer component
         myMaterial = GetComponent<Renderer>().material;
 
-        //will scroll in the y-axis at the speed
+        //will scroll in the y-axis at the speed given
         offSet = new Vector2(0f, backgroundScrollSpeed);
 
     }

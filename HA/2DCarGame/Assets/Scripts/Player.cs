@@ -43,11 +43,17 @@ public class Player : MonoBehaviour
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
 
         //new XPos = current x-position of player + difference in x by keyboard input
-        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+        var newXPos = transform.position.x + deltaX;
+
+        //clamps the newXPos between xMin and xMax
+        newXPos = Mathf.Clamp(newXPos, xMin, xMax);
+
+        //could as do: var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
         //same thing as above
         var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var newYPos = transform.position.y + deltaY;
+        newYPos = Mathf.Clamp(newYPos, yMin, yMax);
 
         //updates the position of the player
         transform.position = new Vector2(newXPos, newYPos);

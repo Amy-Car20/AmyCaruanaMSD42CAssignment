@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389713376326083452}
   - component: {fileID: 382792238845994432}
+  - component: {fileID: 3372606280294720244}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3372606280294720244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517638416097875484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999ff541569ad784baef0ec5d1c46cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 1775730061483625313, guid: f379d17e22939f747b5862473b6cf83a, type: 3}
+  moveSpeed: 2
