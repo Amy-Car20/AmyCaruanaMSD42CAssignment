@@ -2,31 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Truck Wave Config")]
+[CreateAssetMenu(menuName = "Obstacle Wave Config")]
 public class WaveConfig : ScriptableObject
 {
     //the obstacle that will spawn in this wave
-    [SerializeField] GameObject truckPrefab;
+    [SerializeField] GameObject obstaclePrefab;
 
     //the path that the wave will follow
     [SerializeField] GameObject pathPrefab;
 
-    //time between each truck Spawn
+    //time between each obstacle Spawn
     [SerializeField] float timeBetweenSpawns = 0.5f;
 
     //random time difference between spawns
     [SerializeField] float spawnRandomFactor = 0.3f;
 
-    //number of trucks in the Wave
-    [SerializeField] int numberOfTrucks = 3;
+    //number of obstacles in the Wave
+    [SerializeField] int numberOfObstacles = 3;
 
-    //the speed of the truck
-    [SerializeField] float truckMoveSpeed = 2f;
+    //the speed of the obstacle
+    [SerializeField] float obstacleMoveSpeed = 2f;
 
-    public GameObject GetTruckPrefab()
+    public GameObject GetObstaclePrefab()
     {
-        return truckPrefab;
+        return obstaclePrefab;
     }
+ 
 
     public List<Transform> GetWaypoints()
     {
@@ -52,14 +53,14 @@ public class WaveConfig : ScriptableObject
         return spawnRandomFactor;
     }
 
-    public float GetNumberOfTrucks()
+    public float GetNumberOfObstacles()
     {
-        return numberOfTrucks;
+        return numberOfObstacles;
     }
 
-    public float GetTruckMoveSpeed()
+    public float GetObstacleMoveSpeed()
     {
-        return truckMoveSpeed;
+        return obstacleMoveSpeed;
     }
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
-    [SerializeField] float padding = 1f;
+    [SerializeField] float padding = 1f; //check
     float xMin, xMax, yMin, yMax;
 
     // Start is called before the first frame update
@@ -48,14 +48,9 @@ public class Player : MonoBehaviour
         //clamps the newXPos between xMin and xMax
         newXPos = Mathf.Clamp(newXPos, xMin, xMax);
 
-        //could as do: var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-
-        //same thing as above
-        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        var newYPos = transform.position.y + deltaY;
-        newYPos = Mathf.Clamp(newYPos, yMin, yMax);
+        //could also do: var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
         //updates the position of the player
-        transform.position = new Vector2(newXPos, newYPos);
+        transform.position = new Vector2(newXPos, transform.position.y);
     }
 }
