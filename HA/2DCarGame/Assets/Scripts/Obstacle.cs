@@ -44,8 +44,11 @@ public class Obstacle : MonoBehaviour
     {
         GameObject obstacleBullet = Instantiate(obstacleBulletPrefab, transform.position, Quaternion.identity) as GameObject;
 
-        //bullet shoots downwards, hence '-obstacleBulletSpeed'
+        //the bullet shoots downwards, hence '-obstacleBulletSpeed'
         obstacleBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -obstacleBulletSpeed);
+
+        //rotates the bullet by 180 so that it is the right side up
+        obstacleBullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -180));
     }
 
 
