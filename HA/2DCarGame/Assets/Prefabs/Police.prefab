@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1144294251270509183}
   - component: {fileID: 8065340459413757552}
   - component: {fileID: -3694059877589433555}
+  - component: {fileID: 1882510347580404661}
   m_Layer: 0
   m_Name: Police
   m_TagString: Untagged
@@ -100,3 +101,22 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   obstacleBulletPrefab: {fileID: 4374562183688466879, guid: 116011301e99ab347b924f52f6b234cf, type: 3}
   obstacleBulletSpeed: 0.3
+--- !u!114 &1882510347580404661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318854393897937772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999ff541569ad784baef0ec5d1c46cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfig: {fileID: 11400000, guid: 3a3e2d4fa52222b49b50d38b85123897, type: 2}
+  waypoints:
+  - {fileID: 6354739879302520039, guid: f379d17e22939f747b5862473b6cf83a, type: 3}
+  - {fileID: 6921847952535511519, guid: cafe18f459d3f0f47a8dbe237216c4e5, type: 3}
+  - {fileID: 3591561063177152860, guid: d2ab08b0dfbbbe144be4c6bc83d45686, type: 3}
+  - {fileID: 5555885020666195526, guid: eb35d62ef1a625241b94b519a4b3069c, type: 3}
+  moveSpeed: 2

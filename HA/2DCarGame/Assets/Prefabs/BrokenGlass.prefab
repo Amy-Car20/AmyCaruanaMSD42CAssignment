@@ -95,5 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999ff541569ad784baef0ec5d1c46cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waveConfig: {fileID: 0}
+  waypoints:
+  - {fileID: 4470454048592429684, guid: 4264fb124cf311049a0104511f66a7f3, type: 3}
+  - {fileID: 7396380129043529318, guid: 582dde38c93bdcc4983ca298ff626562, type: 3}
+  - {fileID: 8018854295977294696, guid: cce4fe6bf394bdd4cb2fe330bd15d4c1, type: 3}
+  - {fileID: 6275636875287970416, guid: dc5861b9845c91f4bbc77a92e9802512, type: 3}
+  - {fileID: 1588107670327514693, guid: ad032d0645f77ae4fac5443d7c72c300, type: 3}
+  - {fileID: 6990721672175082577, guid: a19d8935080d50e4e86bbb74dbfd7fee, type: 3}
+  - {fileID: 6829326581917029577, guid: d8d625cc11dfc004488f80431c52d961, type: 3}
   moveSpeed: 2
