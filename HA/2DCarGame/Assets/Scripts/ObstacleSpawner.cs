@@ -41,11 +41,11 @@ public class ObstacleSpawner : MonoBehaviour
                     waveToSpawn.GetObstaclePrefab(),
                     waveToSpawn.GetWaypoints()[0].transform.position, Quaternion.identity);
 
-            //the wave will be selected from here and the enemy applied to it
+            //the wave will be selected from here and the obstacle applied to it
             newObstacle.GetComponent<ObstaclePathing>().SetWaveConfig(waveToSpawn);
 
 
-            //wait timeBetweenSpawns before spawning another enemy
+            //wait timeBetweenSpawns before spawning another obstacle
             yield return new WaitForSeconds(waveToSpawn.GetTimeBetweenSpawns());
         }
     }
@@ -55,7 +55,7 @@ public class ObstacleSpawner : MonoBehaviour
         //loop all waves
         foreach (WaveConfig currentWave in waveConfigList)
         {
-            //wait for all enemies to spawn before going to the next wave
+            //wait for all obstacles to spawn before going to the next wave
             yield return StartCoroutine(SpawnAllObstaclesInWave(currentWave));
         }
 

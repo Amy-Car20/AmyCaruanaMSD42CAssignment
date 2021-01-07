@@ -43,8 +43,8 @@ public class ObstaclePathing : MonoBehaviour
             //move from the current position, to the target position, the maximum distance one can move
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
 
-            //moves obstacle downwards
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -180)); 
+            //rotates obstacle by 180
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -180));
 
             //if we reached the target waypoint
             if (transform.position == targetPosition)
@@ -52,7 +52,7 @@ public class ObstaclePathing : MonoBehaviour
                 waypointIndex++;
             }
         }
-        //if enemy moved to all waypoints
+        //if obstacle completes all waves then destroy
         else
         {
             Destroy(gameObject);

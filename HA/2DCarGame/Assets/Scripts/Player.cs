@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] float health = 50f;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f; //check
     float xMin, xMax, yMin, yMax;
@@ -18,6 +19,31 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    //reduces health whenever the player collides with a gameObject which has DamageDealer component
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        //access the Damage Dealer from the "other" object which hit the obstacle
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        //if there is no dmgDealer in otherObject, end the method
+        if (!dmgDealer) //if (dmgDealer == null)
+        {
+            return;
+        }
+        ProcessHit(dmgDealer);
+    }
+
+    //whenever ProcessHit is called, send the DamageDealer details
+    private void ProcessHit(DamageDealer dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     //setting up the boundaries of the movement according to the camera

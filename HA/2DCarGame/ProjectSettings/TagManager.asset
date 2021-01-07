@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Bullet
+  - Police
+  - Spike
+  - Rock
+  - Truck
+  - BrokenGlass
   - 
   - 
   - 
