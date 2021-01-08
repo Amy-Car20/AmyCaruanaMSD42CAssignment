@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 728977218582709006}
   - component: {fileID: 38529026019263453}
   - component: {fileID: 795071707142931537}
+  - component: {fileID: 7741407924237467867}
+  - component: {fileID: 5832187042721474527}
+  - component: {fileID: 1264488379979886415}
   m_Layer: 11
   m_Name: Spike
   m_TagString: Untagged
@@ -105,3 +108,131 @@ MonoBehaviour:
   - {fileID: 1607951359692024133, guid: bef1af730da9dd9448c9861e591defd8, type: 3}
   - {fileID: 8166924166045885680, guid: 00d42a352f6166a428cc22164c792b8d, type: 3}
   moveSpeed: 2
+--- !u!60 &7741407924237467867
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556445329856980049}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3.05}
+    newSize: {x: 3, y: 3.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.35, y: -1.105}
+      - {x: 0.48999998, y: -1.235}
+      - {x: 0.65, y: -1.415}
+      - {x: 0.79999995, y: -1.525}
+      - {x: 0.91999996, y: -1.525}
+      - {x: 0.96, y: -1.475}
+      - {x: 0.95, y: -1.295}
+      - {x: 0.90999997, y: -1.0649999}
+      - {x: 0.83, y: -0.85499996}
+      - {x: 0.85999995, y: -0.775}
+      - {x: 0.89, y: -0.715}
+      - {x: 0.91999996, y: -0.555}
+      - {x: 1.26, y: -0.545}
+      - {x: 1.4499999, y: -0.515}
+      - {x: 1.5, y: -0.465}
+      - {x: 1.5, y: -0.445}
+      - {x: 1.48, y: -0.355}
+      - {x: 1.24, y: -0.175}
+      - {x: 1.03, y: -0.074999996}
+      - {x: 1.04, y: 0.065}
+      - {x: 1.12, y: 0.235}
+      - {x: 1.11, y: 0.345}
+      - {x: 1.39, y: 0.635}
+      - {x: 1.5, y: 0.78499997}
+      - {x: 1.5, y: 0.945}
+      - {x: 1.4499999, y: 0.965}
+      - {x: 1.3399999, y: 0.965}
+      - {x: 1.06, y: 0.885}
+      - {x: 0.87, y: 0.815}
+      - {x: 0.68, y: 0.85499996}
+      - {x: 0.59, y: 0.84499997}
+      - {x: 0.59, y: 1.055}
+      - {x: 0.58, y: 1.1949999}
+      - {x: 0.55, y: 1.415}
+      - {x: 0.48, y: 1.495}
+      - {x: 0.38, y: 1.485}
+      - {x: 0.22, y: 1.3349999}
+      - {x: 0.11, y: 1.1949999}
+      - {x: 0.02, y: 1.055}
+      - {x: -0.17999999, y: 1.105}
+      - {x: -0.31, y: 1.185}
+      - {x: -0.51, y: 1.385}
+      - {x: -0.64, y: 1.485}
+      - {x: -0.71, y: 1.525}
+      - {x: -0.84, y: 1.525}
+      - {x: -0.85999995, y: 1.505}
+      - {x: -0.85999995, y: 1.285}
+      - {x: -0.76, y: 0.935}
+      - {x: -0.72999996, y: 0.84499997}
+      - {x: -0.76, y: 0.645}
+      - {x: -0.9, y: 0.405}
+      - {x: -1.25, y: 0.39499998}
+      - {x: -1.38, y: 0.36499998}
+      - {x: -1.49, y: 0.325}
+      - {x: -1.5, y: 0.315}
+      - {x: -1.5, y: 0.205}
+      - {x: -1.39, y: 0.105}
+      - {x: -1.2099999, y: 0.005}
+      - {x: -1, y: -0.095}
+      - {x: -0.97999996, y: -0.255}
+      - {x: -1.01, y: -0.355}
+      - {x: -1.0799999, y: -0.505}
+      - {x: -1.16, y: -0.59499997}
+      - {x: -1.38, y: -0.825}
+      - {x: -1.4499999, y: -1.005}
+      - {x: -1.4399999, y: -1.045}
+      - {x: -1.31, y: -1.105}
+      - {x: -1.02, y: -1.025}
+      - {x: -0.74, y: -0.895}
+      - {x: -0.7, y: -0.91499996}
+      - {x: -0.64, y: -0.935}
+      - {x: -0.48, y: -0.98499995}
+      - {x: -0.42999998, y: -1.3249999}
+      - {x: -0.35, y: -1.505}
+      - {x: -0.32999998, y: -1.525}
+      - {x: -0.19999999, y: -1.525}
+      - {x: -0.08, y: -1.425}
+      - {x: 0.11, y: -1.045}
+--- !u!114 &5832187042721474527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556445329856980049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8b2384db67441459b03076e76e03cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1264488379979886415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556445329856980049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4598674e66ee94a891b27e08b2dd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5

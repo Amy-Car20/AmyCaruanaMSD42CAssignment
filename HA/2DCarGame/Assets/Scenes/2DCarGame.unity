@@ -322,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 714637245611472004, guid: 3309ad78cc26d6847834feaa2521f1dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.67
+      value: -2.41
       objectReference: {fileID: 0}
     - target: {fileID: 714637245611472004, guid: 3309ad78cc26d6847834feaa2521f1dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -644,6 +644,10 @@ PrefabInstance:
     - target: {fileID: 5372646892660615295, guid: 7ddbfdaaad6a295489380c2061145fe9, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372646892660615295, guid: 7ddbfdaaad6a295489380c2061145fe9, type: 3}
+      propertyPath: backgroundScrollSpeed
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5529050917934348412, guid: 7ddbfdaaad6a295489380c2061145fe9, type: 3}
       propertyPath: m_LocalPosition.x

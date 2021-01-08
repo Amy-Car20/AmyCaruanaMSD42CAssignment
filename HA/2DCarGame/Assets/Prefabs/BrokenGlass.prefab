@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 90853705109150898}
   - component: {fileID: 8849050077883161887}
   - component: {fileID: 5846581611675323156}
+  - component: {fileID: -5867271656091257673}
+  - component: {fileID: -1579777459715262982}
+  - component: {fileID: 5962826840808482233}
   m_Layer: 14
   m_Name: BrokenGlass
   m_TagString: Untagged
@@ -105,3 +108,75 @@ MonoBehaviour:
   - {fileID: 6990721672175082577, guid: a19d8935080d50e4e86bbb74dbfd7fee, type: 3}
   - {fileID: 6829326581917029577, guid: d8d625cc11dfc004488f80431c52d961, type: 3}
   moveSpeed: 2
+--- !u!60 &-5867271656091257673
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404374829339252664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.04, y: 2.36}
+    newSize: {x: 1.04, y: 2.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.52, y: 0.57}
+      - {x: 0.48, y: 0.59999996}
+      - {x: 0.38, y: 0.62}
+      - {x: 0.34, y: 0.57}
+      - {x: 0.21, y: 1.16}
+      - {x: 0.19, y: 1.18}
+      - {x: 0, y: 1.18}
+      - {x: -0.02, y: 1.16}
+      - {x: -0.04, y: 0.42}
+      - {x: -0.13, y: 0.48}
+      - {x: -0.17, y: 0.42}
+      - {x: -0.35, y: 0.41}
+      - {x: -0.38, y: 0.44}
+      - {x: -0.45, y: 0.45999998}
+      - {x: -0.52, y: 0.42999998}
+      - {x: -0.52, y: -1.06}
+      - {x: -0.48, y: -1.12}
+      - {x: -0.35999998, y: -1.17}
+      - {x: -0.26, y: -1.18}
+      - {x: 0.28, y: -1.18}
+      - {x: 0.44, y: -1.14}
+      - {x: 0.52, y: -1.0699999}
+--- !u!114 &-1579777459715262982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404374829339252664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8b2384db67441459b03076e76e03cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5962826840808482233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404374829339252664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4598674e66ee94a891b27e08b2dd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3

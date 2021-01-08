@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7995621008198492896}
   - component: {fileID: 6874029133313054174}
   - component: {fileID: -8337446831382165989}
+  - component: {fileID: -2725922845431617169}
+  - component: {fileID: 2499570962499738455}
+  - component: {fileID: 3140979990109119468}
   m_Layer: 12
   m_Name: Rock
   m_TagString: Untagged
@@ -105,3 +108,69 @@ MonoBehaviour:
   - {fileID: 8816510837677121259, guid: 1e3ac8988966fe14bb55d31542090192, type: 3}
   - {fileID: 4938374486157994535, guid: c218ea96971a83e47b9acefd1bd7b38c, type: 3}
   moveSpeed: 2
+--- !u!60 &-2725922845431617169
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996819951350627381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4, y: 1.31}
+    newSize: {x: 1.4, y: 1.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.48999998, y: 0.085}
+      - {x: 0.32999998, y: 0.255}
+      - {x: 0.11, y: 0.325}
+      - {x: -0.24, y: 0.325}
+      - {x: -0.32999998, y: 0.315}
+      - {x: -0.45, y: 0.205}
+      - {x: -0.51, y: 0.114999995}
+      - {x: -0.51, y: -0.065}
+      - {x: -0.45, y: -0.145}
+      - {x: -0.34, y: -0.24499999}
+      - {x: -0.22, y: -0.325}
+      - {x: -0.07, y: -0.33499998}
+      - {x: 0.17999999, y: -0.33499998}
+      - {x: 0.19999999, y: -0.325}
+      - {x: 0.41, y: -0.185}
+      - {x: 0.48999998, y: -0.055}
+--- !u!114 &2499570962499738455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996819951350627381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8b2384db67441459b03076e76e03cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3140979990109119468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996819951350627381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4598674e66ee94a891b27e08b2dd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 4
