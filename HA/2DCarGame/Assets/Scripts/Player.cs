@@ -7,6 +7,13 @@ public class Player : MonoBehaviour
     [SerializeField] float health = 50f;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f; //check
+
+    //[SerializeField] GameObject deathVFX;
+    //[SerializeField] float explosionDuration = 1f;
+
+    [SerializeField] AudioClip healthReduction;
+    //allows the variable to be set in the Inspector from 0 to 1
+    [SerializeField] [Range(0, 1)] float healthReductionVolume = 0.75f;
     float xMin, xMax, yMin, yMax;
 
     // Start is called before the first frame update
@@ -40,9 +47,12 @@ public class Player : MonoBehaviour
     {
         health -= dmgDealer.GetDamage();
 
+        //destroys the bullet on collision
+        dmgDealer.Hit(); 
+
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -79,4 +89,20 @@ public class Player : MonoBehaviour
         //updates the position of the player
         transform.position = new Vector2(newXPos, transform.position.y);
     }
+
+    private void Die()
+    {
+        //destroys player
+        Destroy(gameObject);
+
+        //playing the sound once player dies
+        AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
+
+        //instatiate explosion effects
+        //GameObject explosion = Instatiate(deathVFX, transform.position, Quaternion.identity);
+
+        //destroy after 1 second
+        //Destroy(explosion, explosionDuration);
+    }
+
 }

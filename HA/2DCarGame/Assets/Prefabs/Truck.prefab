@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3372606280294720244}
   - component: {fileID: 2798337372512766040}
   - component: {fileID: 7153297699931481796}
-  - component: {fileID: -9204558934858490757}
   - component: {fileID: 7636757893665137838}
   m_Layer: 13
   m_Name: Truck
@@ -185,18 +184,6 @@ PolygonCollider2D:
       - {x: 0.06, y: -1.1}
       - {x: 0.07, y: -1.09}
       - {x: 0.13, y: -1.02}
---- !u!114 &-9204558934858490757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5517638416097875484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8b2384db67441459b03076e76e03cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7636757893665137838
 MonoBehaviour:
   m_ObjectHideFlags: 0

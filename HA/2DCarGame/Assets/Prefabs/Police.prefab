@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -3694059877589433555}
   - component: {fileID: 1882510347580404661}
   - component: {fileID: -5917119420538495603}
-  - component: {fileID: -5342148905311861376}
   - component: {fileID: 9140212573313743758}
   m_Layer: 10
   m_Name: Police
@@ -170,18 +169,6 @@ PolygonCollider2D:
       - {x: 0.29, y: -1.09}
       - {x: 0.39, y: -1.01}
       - {x: 0.47, y: -0.84}
---- !u!114 &-5342148905311861376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318854393897937772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8b2384db67441459b03076e76e03cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9140212573313743758
 MonoBehaviour:
   m_ObjectHideFlags: 0
