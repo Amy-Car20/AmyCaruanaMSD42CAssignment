@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class Shredder : MonoBehaviour
 {
     [SerializeField] int scoreValue = 5;
+
+    [SerializeField] AudioClip pointsGained;
+    //allows the variable to be set in the Inspector from 0 to 1
+    [SerializeField] [Range(0, 1)] float pointsGainedVolume = 0.75f;
+
     //destroys bullet clones in order to avoid cluster of bullets
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
@@ -14,7 +19,11 @@ public class Shredder : MonoBehaviour
         {
             Destroy(otherObject.gameObject);
 
+            //playing sound once 5 points added
+            AudioSource.PlayClipAtPoint(pointsGained, Camera.main.transform.position, pointsGainedVolume);
+
             FindObjectOfType<GameSession>().AddToScore(scoreValue);
+
         }
         else
         {

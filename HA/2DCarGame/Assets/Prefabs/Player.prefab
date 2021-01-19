@@ -100,7 +100,7 @@ MonoBehaviour:
   moveSpeed: 6
   padding: 1
   healthReduction: {fileID: 8300000, guid: d893945413c4958438ffe5504d1a1a44, type: 3}
-  healthReductionVolume: 1
+  healthReductionVolume: 0.751
   explosionVFX: {fileID: 6356305725796838725, guid: 809af523ea4310141adbb26d3d2474d0, type: 3}
   explosionVFXDuration: 1
 --- !u!60 &-1199872958699031440

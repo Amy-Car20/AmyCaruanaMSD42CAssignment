@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float health = 50f;
+    [SerializeField] int health = 50;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f; //check
 
     [SerializeField] AudioClip healthReduction;
     //allows the variable to be set in the Inspector from 0 to 1
     [SerializeField] [Range(0, 1)] float healthReductionVolume = 0.75f;
+
     float xMin, xMax, yMin, yMax;
 
     [SerializeField] GameObject explosionVFX;
@@ -28,6 +29,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     //reduces health whenever the player collides with a gameObject which has DamageDealer component
@@ -54,6 +60,9 @@ public class Player : MonoBehaviour
 
         //destroy after 1 second
         Destroy(explosion, explosionVFXDuration);
+
+        //playing the sound once player dies
+        AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
 
         //destroys the bullet on collision
         dmgDealer.Hit(); 
@@ -100,8 +109,6 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if (playerScore < 100) 
-        {
             //destroys player
             Destroy(gameObject);
 
@@ -116,7 +123,5 @@ public class Player : MonoBehaviour
 
             //destroy after 1 second
             Destroy(explosion, explosionVFXDuration);
-
-        }
     }
 }
