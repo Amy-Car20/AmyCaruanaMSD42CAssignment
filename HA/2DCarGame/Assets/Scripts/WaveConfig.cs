@@ -23,6 +23,8 @@ public class WaveConfig : ScriptableObject
     //the speed of the obstacle
     [SerializeField] float obstacleMoveSpeed = 2f;
 
+    public static object GameObject { get; internal set; }
+
     public GameObject GetObstaclePrefab()
     {
         return obstaclePrefab;

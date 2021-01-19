@@ -8,13 +8,15 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f; //check
 
-    //[SerializeField] GameObject deathVFX;
-    //[SerializeField] float explosionDuration = 1f;
-
     [SerializeField] AudioClip healthReduction;
     //allows the variable to be set in the Inspector from 0 to 1
     [SerializeField] [Range(0, 1)] float healthReductionVolume = 0.75f;
     float xMin, xMax, yMin, yMax;
+
+    [SerializeField] GameObject explosionVFX;
+    [SerializeField] float explosionVFXDuration = 1f;
+    
+    int playerScore = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +48,12 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer dmgDealer)
     {
         health -= dmgDealer.GetDamage();
+
+        //instatiate explosion effects
+        GameObject explosion = Instantiate(explosionVFX, transform.position, Quaternion.identity);
+
+        //destroy after 1 second
+        Destroy(explosion, explosionVFXDuration);
 
         //destroys the bullet on collision
         dmgDealer.Hit(); 
@@ -92,17 +100,23 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        //destroys player
-        Destroy(gameObject);
+        if (playerScore < 100) 
+        {
+            //destroys player
+            Destroy(gameObject);
 
-        //playing the sound once player dies
-        AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
+            //playing the sound once player dies
+            AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
 
-        //instatiate explosion effects
-        //GameObject explosion = Instatiate(deathVFX, transform.position, Quaternion.identity);
+            //find object of type Level in Hierarchy and run its method LoadGameOver()
+            FindObjectOfType<Level>().LoadGameOver();
 
-        //destroy after 1 second
-        //Destroy(explosion, explosionDuration);
+            //instatiate explosion effects
+            GameObject explosion = Instantiate(explosionVFX, transform.position, Quaternion.identity);
+
+            //destroy after 1 second
+            Destroy(explosion, explosionVFXDuration);
+
+        }
     }
-
 }

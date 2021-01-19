@@ -5,6 +5,11 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 1;
+
+    [SerializeField] GameObject explosionVFX;
+    [SerializeField] float explosionVFXDuration = 1f;
+
+
     //the damage received
     public int GetDamage()
     {

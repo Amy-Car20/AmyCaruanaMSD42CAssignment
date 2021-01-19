@@ -44,7 +44,6 @@ public class ObstacleSpawner : MonoBehaviour
             //the wave will be selected from here and the obstacle applied to it
             newObstacle.GetComponent<ObstaclePathing>().SetWaveConfig(waveToSpawn);
 
-
             //wait timeBetweenSpawns before spawning another obstacle
             yield return new WaitForSeconds(waveToSpawn.GetTimeBetweenSpawns());
         }
@@ -58,6 +57,5 @@ public class ObstacleSpawner : MonoBehaviour
             //wait for all obstacles to spawn before going to the next wave
             yield return StartCoroutine(SpawnAllObstaclesInWave(currentWave));
         }
-
     }
 }
