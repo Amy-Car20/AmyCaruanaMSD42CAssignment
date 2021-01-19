@@ -810,6 +810,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2391930266323126240, guid: cac7171e949b0e24abdae3d8405b7758, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391930266323126240, guid: cac7171e949b0e24abdae3d8405b7758, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2391930266323126242, guid: cac7171e949b0e24abdae3d8405b7758, type: 3}
       propertyPath: m_Name
       value: Canvas

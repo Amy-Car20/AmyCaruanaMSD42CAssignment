@@ -927,6 +927,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7452881147138293959, guid: abb7344a3a9a476409270f1d0a07877f, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452881147138293959, guid: abb7344a3a9a476409270f1d0a07877f, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7452881147138293976, guid: abb7344a3a9a476409270f1d0a07877f, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
