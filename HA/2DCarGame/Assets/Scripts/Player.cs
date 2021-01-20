@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject explosionVFX;
     [SerializeField] float explosionVFXDuration = 1f;
-    
+
     int playerScore = 0;
 
     // Start is called before the first frame update
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
 
         //destroys the bullet on collision
-        dmgDealer.Hit(); 
+        dmgDealer.Hit();
 
         if (health <= 0)
         {
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
-    
+
     //moves the player around
     private void Move()
     {
@@ -109,19 +109,20 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-            //destroys player
-            Destroy(gameObject);
+        //destroys player
+        Destroy(gameObject);
 
-            //playing the sound once player dies
-            AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
+        //playing the sound once player dies
+        AudioSource.PlayClipAtPoint(healthReduction, Camera.main.transform.position, healthReductionVolume);
 
-            //find object of type Level in Hierarchy and run its method LoadGameOver()
-            FindObjectOfType<Level>().LoadGameOver();
+        //find object of type Level in Hierarchy and run its method LoadGameOver()
+        FindObjectOfType<Level>().LoadGameOver();
 
-            //instatiate explosion effects
-            GameObject explosion = Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        //instatiate explosion effects
+        GameObject explosion = Instantiate(explosionVFX, transform.position, Quaternion.identity);
 
-            //destroy after 1 second
-            Destroy(explosion, explosionVFXDuration);
+        //destroy after 1 second
+        Destroy(explosion, explosionVFXDuration);
     }
 }
+
